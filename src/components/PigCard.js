@@ -1,29 +1,11 @@
 import React, { useState } from 'react'
-
+import NoDetails from './NoDetails'
+import WithDetails from './WithDetails'
 
 const PigCard = ({pig}) => {
 
   const [ showDetails, setShowDetails] = useState( true )
 
-  const NoDetails = ({ name, image }) => {
-        return (
-            <div>
-                <h1>{ name }</h1>
-                <img src={ image } alt={ name }/>
-            </div>
-    )
-  }
-  const WithDetails = ({ pig }) => {
-    return (
-        <div>
-            <h1>{ pig.name }</h1>
-            <h3>{ pig.specialty }</h3>
-            <h2>{ pig.weight } kilos</h2>
-            <h4 className="achievementText">{ pig["highest medal achieved"]} medal achieved</h4>
-            { pig.greased ? <h3>Greased</h3> : <div>Not Greased</div> }
-        </div>
-    )
-  }
   
 
 
